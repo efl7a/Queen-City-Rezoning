@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  petitioner: MyString
+  website: MyString
+  decision: MyString
+  decision_date: MyString
+  description: MyString
+  district: MyString
+
+two:
+  number: MyString
+  petitioner: MyString
+  website: MyString
+  decision: MyString
+  decision_date: MyString
+  description: MyString
+  district: MyString
