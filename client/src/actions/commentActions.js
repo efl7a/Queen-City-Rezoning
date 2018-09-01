@@ -1,8 +1,8 @@
-export function fetchComments (petitionId) {
+export function fetchComments () {
   return(dispatch) => {
     dispatch({type: 'LOADING_COMMENTS'});
-    return fetch(`/api/petitions/${petitionId}/comments`)
+    return fetch(`/api/comments`)
     .then(response => {return response.json() })
-    .then(commentss => dispatch({ type: 'FETCH_COMMENTS', payload: commentss}))
+    .then(comments => dispatch({ type: 'FETCH_COMMENTS', payload: comments}))
   }
 }

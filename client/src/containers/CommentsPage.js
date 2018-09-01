@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 import { fetchComments } from '../actions/commentActions';
 import Comment from '../components/Comment'
 
-class CommentsList extends Component {
+class CommentsPage extends Component {
 
   componentDidMount() {
-    this.props.fetchComments(this.props.petitionId)
+    this.props.fetchComments()
   };
   render(){
-    const renderComments = this.props.comments.map(comment => <Comment comment={comment}/>)
+    const pertinentComments = this.props.comments.filter(comment => comment.petition_id === +this.props.petitionId)
+    const renderComments = pertinentComments.map(comment => <Comment comment={comment}/>)
     return (
       <div>
         {renderComments}
@@ -25,4 +26,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default  connect(mapStateToProps, { fetchComments } )(CommentsList);
+export default  connect(mapStateToProps, { fetchComments } )(CommentsPage);

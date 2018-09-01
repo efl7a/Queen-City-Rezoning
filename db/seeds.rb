@@ -6,3 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Scraper.new.scrape_petitions
+
+Petition.all.each do |petition|
+  Comment.create(petition_id: petition.id, content: "Sample Comment")
+end
