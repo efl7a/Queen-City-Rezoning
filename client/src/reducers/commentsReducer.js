@@ -1,7 +1,7 @@
 export default (state = [], action) => {
   switch (action.type) {
 
-    case 'LOADING_PETITIONS':
+    case 'LOADING_COMMENTS':
     console.log("loading")
       return state;
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import CommentsList from './CommentsList'
+
 const PetitionsShow = ({ petition }) => {
   return (
     <div>
@@ -27,6 +29,8 @@ const PetitionsShow = ({ petition }) => {
           <td>{petition.website}</td>
         </tr>
       </table>
+      {/* <CommentsNew petitionId={petition.id}/> */}
+      <CommentsList petitionId={petition.id} />
     </div>
   );
 }
