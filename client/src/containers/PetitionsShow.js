@@ -4,10 +4,29 @@ import { connect } from 'react-redux';
 const PetitionsShow = ({ petition }) => {
   return (
     <div>
-      Petition Details
       <h2>{petition.number}</h2>
-      <p>{petition.description}</p>
-      <p>{petition.petitioner}</p>
+      <table>
+        <tr>
+          <th>District</th>
+          <th>Description</th>
+          <th>Petitioner</th>
+        </tr>
+        <tr>
+          <td>{petition.district}</td>
+          <td>{petition.description}</td>
+          <td>{petition.petitioner}</td>
+        </tr>
+        <tr>
+          <th>Decision</th>
+          <th>Decision Date</th>
+          <th>Website</th>
+        </tr>
+        <tr>
+          <td>{petition.decision}</td>
+          <td>{petition.decision_date}</td>
+          <td>{petition.website}</td>
+        </tr>
+      </table>
     </div>
   );
 }
