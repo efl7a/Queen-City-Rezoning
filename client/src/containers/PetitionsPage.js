@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 import { connect } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
+// import { Route, Switch } from 'react-router-dom';
 
 import { fetchPetitions } from '../actions/petitionActions';
 import PetitionsShow from './PetitionsShow';
@@ -17,7 +17,7 @@ class PetitionsPage extends Component {
         Petitions from this year
         <PetitionList petitions={this.props.petitions}/>
         {/* <Switch> {/* Make sure to wrap all of your Routes as children of the Switch component*/ } */}
-          <Route exact path={`${this.props.match.url}/:petitionId`} component={PetitionsShow}/>
+          {/* <Route exact path={`${this.props.match.url}/:petitionId`} component={PetitionsShow}/> */}
         {/* </Switch> */}
       </div>
     )

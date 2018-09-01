@@ -9,6 +9,7 @@ import {
 
 
 import PetitionsPage from './PetitionsPage';
+import PetitionsShow from './PetitionsShow';
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route exact path='/' render={(props) => <PetitionsPage {...props}/>} />
+          <Route exact path='/:petitionId' component={PetitionsShow}/>
         </div>
       </Router>
 
