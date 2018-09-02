@@ -11,12 +11,17 @@ import {
 import PetitionsPage from './PetitionsPage';
 import PetitionsShow from './PetitionsShow';
 
+var rezoningLogo = require(`../images/rezoningLogo.png`)
+
 class App extends Component {
 
   render() {
     return (
       <Router>
         <div className="App">
+          <header>
+            <img src={rezoningLogo} alt='rezoning logo' className='logo' />
+          </header>
           <Route exact path='/' render={(props) => <PetitionsPage {...props}/>} />
           <Route exact path='/:petitionId' component={PetitionsShow}/>
         </div>

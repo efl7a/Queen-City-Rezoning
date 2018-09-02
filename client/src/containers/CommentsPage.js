@@ -11,7 +11,7 @@ class CommentsPage extends Component {
   };
   render(){
     const pertinentComments = this.props.comments.filter(comment => comment.petition_id === +this.props.petitionId)
-    const renderComments = pertinentComments.map(comment => <Comment comment={comment}/>)
+    const renderComments = pertinentComments.map(comment => <Comment key={comment.id} comment={comment}/>)
     return (
       <div>
         {renderComments}
