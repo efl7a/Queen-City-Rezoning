@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import CommentsPage from './CommentsPage'
+import CommentsPage from './CommentsPage';
+import CommentsNew from './CommentsNew';
 
 const PetitionsShow = ({ petition }) => {
   return (
@@ -34,7 +35,7 @@ const PetitionsShow = ({ petition }) => {
         </tr>
       </table>
       <h2>Comments</h2>
-      {/* <CommentsNew petitionId={petition.id}/> */}
+      <CommentsNew petitionId={petition.id}/>
       <CommentsPage petitionId={petition.id} />
     </div>
   );

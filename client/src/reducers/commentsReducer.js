@@ -9,6 +9,10 @@ export default (state = [], action) => {
       console.log("fetching")
       return action.payload;
 
+    case 'ADDING_COMMENTS':
+    console.log("sending data to api")
+      return state;
+
     default:
       return state;
   }

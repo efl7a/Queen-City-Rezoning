@@ -24,18 +24,43 @@
   font-size: large;
 } */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
 
 h2 {
   text-align: center
 }
 
-.logo {
+.logo-container {
   position: fixed;
+  width: 100%;
+  top: 5px;
+}
+
+.logo {
   width: 60%;
   padding-top: 10px;
-  left: 10%;
+  margin-left: 20%;
+}
+
+.content {
+  margin-top: 15%;
+}
+
+.list td, th{
+  border: none;
+}
+
+.list th.petNum {
+  width: 25%;
+}
+
+.list td.petNum {
+  width: 45%;
+}
+
+.list.district {
+  width: 15%;
 }

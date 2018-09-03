@@ -1,45 +1,46 @@
-// import React, { Component } from 'react'
-// import { connect } from 'react-redux';
-//
-// class CreateTodo extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       text: '',
-//     };
-//   }
-//
-//   handleChange(event) {
-//     this.setState({
-//       text: event.target.value
-//     });
-//   }
-//
-//   handleSubmit = event => {
-//     event.preventDefault();
-//     this.props.addTodo(this.state)
-//   }
-//
-//   render() {
-//     return(
-//       <div>
-//         <form onSubmit={ event => this.handleSubmit(event) }>
-//           <p>
-//             <label>add todo</label>
-//             <input type="text" onChange={(event) => this.handleChange(event)}/>
-//           </p>
-//           <input type="submit" />
-//         </form>
-//         {this.state.text}
-//       </div>
-//     )
-//   }
-// }
-//
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     addTodo: formData => dispatch({ type: "ADD_TODO", payload: formData })
-//   }
-// }
-//
-// export default connect(null, mapDispatchToProps)(CreateTodo);
+import React, { Component } from 'react'
+import { connect } from 'react-redux';
+
+import { addComment } from '../actions/commentActions';
+
+class CommentsNew extends Component {
+  constructor() {
+    super();
+    this.state = {
+      content: '',
+    };
+  }
+
+  handleChange(event) {
+    this.setState({
+      content: event.target.value
+    });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.addComment(this.state)
+    this.setState({
+       content: ''
+     });
+  }
+
+  render() {
+    return(
+      <div>
+        <form onSubmit={ event => this.handleSubmit(event) }>
+          <p>
+            <label>New Comment</label>
+            <input type="hidden" name="petition_id" value={this.props.petitionId} />
+            <input type="text" name="content" onChange={(event) => this.handleChange(event)}/>
+          </p>
+          <input type="submit" />
+        </form>
+        {this.state.content}
+      </div>
+    )
+  }
+}
+
+
+export default connect(null, { addComment })(CommentsNew);
