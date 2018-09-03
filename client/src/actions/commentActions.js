@@ -7,12 +7,13 @@ export function fetchComments () {
   }
 }
 
-export function addComment (formData) {
+export function addComment (content, petitionId) {
+  const comment = { content: content, petition_id: petitionId }
   return(dispatch) => {
-    dispatch({type: "ADDING_COMMENTS"});
+    dispatch({ type: "ADDING_COMMENTS", payload: comment });
     return fetch('api/comments', {
       method: 'post',
-      body: formData
+      data: comment
     }).then(response => {return response.json() })
     .then(comments => dispatch({ type: 'FETCH_COMMENTS', payload: comments}))
   }

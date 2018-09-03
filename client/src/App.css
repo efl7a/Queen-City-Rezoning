@@ -36,7 +36,8 @@ h2 {
 .logo-container {
   position: fixed;
   width: 100%;
-  top: 5px;
+  top: 0px;
+  background: white;
 }
 
 .logo {

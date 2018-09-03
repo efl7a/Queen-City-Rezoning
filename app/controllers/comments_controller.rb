@@ -7,15 +7,16 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment = Comment.new(comment_params)
-    if comment.save
+    @comment = Comment.new(comment_params)
+    if @comment.save
       render(
         status: 200,
         json: Comment.all
       )
     else
       render(
-        status: 400
+        status: 400,
+        json: @comment.errors
       )
     end
   end
@@ -23,6 +24,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:body).permit(:petition_id, :content)
+    params.permit(:content, :petition_id)
   end
+
 end

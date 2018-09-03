@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 // import { Route, Switch } from 'react-router-dom';
 
 import { fetchPetitions } from '../actions/petitionActions';
-import PetitionsShow from './PetitionsShow';
+// import PetitionsShow from './PetitionsShow';
 import PetitionList from '../components/PetitionList';
 
 class PetitionsPage extends Component {
@@ -13,7 +13,7 @@ class PetitionsPage extends Component {
   };
   render(){
     return (
-      <div className="petitions">
+      <div className="content">
         <h2>Petitions from this year</h2>
         <PetitionList petitions={this.props.petitions}/>
         {/* <Switch> {/* Make sure to wrap all of your Routes as children of the Switch component*/ } */}

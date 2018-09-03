@@ -19,7 +19,7 @@ class CommentsNew extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addComment(this.state)
+    this.props.addComment(this.state.content, this.props.petitionId)
     this.setState({
        content: ''
      });
@@ -31,7 +31,6 @@ class CommentsNew extends Component {
         <form onSubmit={ event => this.handleSubmit(event) }>
           <p>
             <label>New Comment</label>
-            <input type="hidden" name="petition_id" value={this.props.petitionId} />
             <input type="text" name="content" onChange={(event) => this.handleChange(event)}/>
           </p>
           <input type="submit" />

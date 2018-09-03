@@ -10,7 +10,7 @@ export default (state = [], action) => {
       return action.payload;
 
     case 'ADDING_COMMENTS':
-    console.log("sending data to api")
+    console.log(action.payload)
       return state;
 
     default:

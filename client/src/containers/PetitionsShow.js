@@ -9,30 +9,32 @@ const PetitionsShow = ({ petition }) => {
     <div>
       <h2>{petition.number}</h2>
       <table>
-        <tr>
-          <th>District</th>
-          <td>{petition.district}</td>
-        </tr>
-        <tr>
-          <th>Petitioner</th>
-          <td>{petition.petitioner}</td>
-        </tr>
-        <tr>
-          <th>Description</th>
-          <td>{petition.description}</td>
-        </tr>
-        <tr>
-          <th>Website</th>
-          <td>{petition.website}</td>
-        </tr>
-        <tr>
-          <th>Decision</th>
-          <td>{petition.decision}</td>
-        </tr>
-        <tr>
-          <th>Decision Date</th>
-          <td>{petition.decision_date}</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th>District</th>
+            <td>{petition.district}</td>
+          </tr>
+          <tr>
+            <th>Petitioner</th>
+            <td>{petition.petitioner}</td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td>{petition.description}</td>
+          </tr>
+          <tr>
+            <th>Website</th>
+            <td>{petition.website}</td>
+          </tr>
+          <tr>
+            <th>Decision</th>
+            <td>{petition.decision}</td>
+          </tr>
+          <tr>
+            <th>Decision Date</th>
+            <td>{petition.decision_date}</td>
+          </tr>
+        </tbody>
       </table>
       <h2>Comments</h2>
       <CommentsNew petitionId={petition.id}/>
