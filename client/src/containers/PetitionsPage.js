@@ -11,11 +11,16 @@ class PetitionsPage extends Component {
   componentDidMount() {
     this.props.fetchPetitions()
   };
+
+  onSort(sortBy) {
+    this.props.fetchPetitions(sortBy)
+  }
+
   render(){
     return (
       <div className="content">
-        <h2>Petitions from this year</h2>
-        <PetitionList petitions={this.props.petitions}/>
+        <h2>Petitions from 2018</h2>
+        <PetitionList petitions={this.props.petitions} onSort={this.onSort}/>
         {/* <Switch> {/* Make sure to wrap all of your Routes as children of the Switch component*/ } */}
           {/* <Route exact path={`${this.props.match.url}/:petitionId`} component={PetitionsShow}/> */}
         {/* </Switch> */}
