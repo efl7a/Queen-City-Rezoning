@@ -14,7 +14,7 @@ class PetitionsPage extends Component {
 
   onSort(sortBy) {
     this.props.fetchPetitions(sortBy)
-  }
+  };
 
   render(){
     return (
