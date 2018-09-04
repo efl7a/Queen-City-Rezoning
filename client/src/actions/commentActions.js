@@ -12,11 +12,13 @@ export function addComment (content, petitionId) {
 
   return (dispatch) => {
     dispatch({ type: "ADDING_COMMENTS", payload: comment });
-    return fetch('api/comments', {
+    console.log("this is comment", comment)
+    const response = fetch('/api/comments', {
       method: 'post',
       headers: { "Content-Type": "application/json" },
       data: { comment: { content: content, petition_id: petitionId } }
-    }).then(response => response.json())
-        .then(comments => dispatch({ type: 'FETCH_COMMENTS', payload: comments}))
+      })
+      .then(response => response.json())
+      .then(comments => dispatch({ type: 'FETCH_COMMENTS', payload: comments}))
   }
 }
