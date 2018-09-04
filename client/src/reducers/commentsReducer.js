@@ -13,6 +13,9 @@ export default (state = [], action) => {
     console.log(action.payload)
       return state;
 
+    case 'POST_FAILED':
+      return state;
+
     default:
       return state;
   }

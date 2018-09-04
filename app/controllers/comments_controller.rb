@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    puts params
     @comment = Comment.new(comment_params)
     if @comment.save
       render(
@@ -24,7 +25,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.permit(:content, :petition_id)
+    params.require(:comment).permit(:content, :petition_id)
   end
 
 end
