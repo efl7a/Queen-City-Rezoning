@@ -1,11 +1,11 @@
-export function fetchPetitions (sortBy="number") {
+export function fetchPetitions(sortBy) {
 
-  let p = new URLSearchParams();
-  p.append("sort", sortBy)
+  // let p = new URLSearchParams();
+  // p.append("sort", sortBy)
 
   return(dispatch) => {
     dispatch({type: 'LOADING_PETITIONS'});
-    return fetch('/api/petitions?' + p, {
+    return fetch(`/api/petitions?sort=${sortBy}`, {
       method: "GET",
     })
     .then(response => {return response.json() })

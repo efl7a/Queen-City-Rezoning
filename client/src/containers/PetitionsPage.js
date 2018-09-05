@@ -9,10 +9,10 @@ import PetitionList from '../components/PetitionList';
 class PetitionsPage extends Component {
 
   componentDidMount() {
-    this.props.fetchPetitions()
+    this.props.fetchPetitions("number")
   };
 
-  onSort(sortBy) {
+  onSort = (sortBy) => {
     this.props.fetchPetitions(sortBy)
   };
 

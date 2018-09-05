@@ -23,8 +23,8 @@ class PetitionList extends Component {
     );
   return (
     <div>
-      <button onClick={this.sortingHandler('number')}>Sort by Petition Number</button>
-      <button onClick={this.sortingHandler('district')}>Sort by District</button>
+      <button onClick={() => this.sortingHandler('number')}>Sort by Petition Number</button>
+      <button onClick={() => this.sortingHandler('district')}>Sort by District</button>
 
       <table className="list">
         {renderPetitions}
