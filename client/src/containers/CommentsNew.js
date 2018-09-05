@@ -31,7 +31,7 @@ class CommentsNew extends Component {
         <form onSubmit={ event => this.handleSubmit(event) }>
           <p>
             <label>New Comment</label>
-            <input type="text" name="content" onChange={(event) => this.handleChange(event)}/>
+            <input type="text" value={this.state.content} onChange={(event) => this.handleChange(event)}/>
           </p>
           <input type="submit" />
         </form>

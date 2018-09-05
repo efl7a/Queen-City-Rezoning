@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def index
     render(
       status: 200,
-      json: Comment.all
+      json: Comment.order(created_at: :desc)
     )
   end
 
@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
     if @comment.save
       render(
         status: 200,
-        json: Comment.all
+        json: Comment.order(created_at: :desc)
       )
     else
       render(
