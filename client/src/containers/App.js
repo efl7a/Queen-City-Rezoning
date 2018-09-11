@@ -10,7 +10,7 @@ import {
 
 import PetitionsPage from './PetitionsPage';
 import PetitionsShow from './PetitionsShow';
-
+import NavBar from '../components/NavBar';
 var rezoningLogo = require(`../images/rezoningLongLogo.png`)
 
 class App extends Component {
@@ -21,7 +21,11 @@ class App extends Component {
         <div className="App">
           <div className='logo-container'>
             <img src={rezoningLogo} alt='rezoning logo' className='logo' />
+            <div className="nav">
+              <NavBar />
+            </div>
           </div>
+
           <div className="content">
             <Route exact path='/' render={(props) => <PetitionsPage {...props}/>} />
             <Route exact path='/:petitionId' component={PetitionsShow}/>

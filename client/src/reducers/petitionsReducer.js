@@ -9,6 +9,10 @@ export default (state = [], action) => {
       console.log("fetching")
       return action.payload;
 
+    case 'SEARCHING_PETITIONS':
+      console.log("looking for what you want")
+      return state;
+
     default:
       return state;
   }
