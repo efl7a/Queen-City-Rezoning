@@ -5,12 +5,13 @@ class PetitionsController < ApplicationController
       puts "searching for ${params[:search]}"
       render(
         status: 200,
-        json: Petition.all(params[:search])
+        json: Petition.where(params[:search])
       )
     elsif params[:district]
+      puts params[:district]
       render(
         status: 200,
-        json: Petition.all(district: params[:district])
+        json: Petition.where(district: params[:district])
       )
     else
       render(

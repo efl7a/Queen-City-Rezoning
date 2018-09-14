@@ -4,12 +4,12 @@ import Search from './Search';
 import { connect } from 'react-redux';
 import { petitionByDistrict } from '../actions/petitionActions';
 
-const NavBar = (props) => {
+const NavBar = ({ petitionByDistrict }) => {
   return (
     <div>
       <NavLink to="/">Home</NavLink>
-        Petition By District
-        <select onChange={(event)=> this.props.petitionByDistrict(event.target.value)}>
+        Petitions By District
+        <select onChange={(event) => petitionByDistrict(event.target.value)}>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
