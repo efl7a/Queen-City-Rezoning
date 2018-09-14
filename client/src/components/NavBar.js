@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Search from './Search';
+import Search from '../containers/Search';
 // import { connect } from 'react-redux';
 // import { petitionByDistrict } from '../actions/petitionActions';
 

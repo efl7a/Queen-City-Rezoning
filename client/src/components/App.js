@@ -10,7 +10,7 @@ import {
 
 import PetitionsPage from '../containers/PetitionsPage';
 import PetitionsShow from '../containers/PetitionsShow';
-import NavBar from '../containers/NavBar';
+import NavBar from './NavBar';
 var rezoningLogo = require(`../images/rezoningLongLogo.png`)
 
 class App extends Component {
