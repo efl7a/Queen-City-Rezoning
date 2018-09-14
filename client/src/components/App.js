@@ -8,9 +8,9 @@ import {
 } from 'react-router-dom';
 
 
-import PetitionsPage from './PetitionsPage';
-import PetitionsShow from './PetitionsShow';
-import NavBar from '../components/NavBar';
+import PetitionsPage from '../containers/PetitionsPage';
+import PetitionsShow from '../containers/PetitionsShow';
+import NavBar from '../containers/NavBar';
 var rezoningLogo = require(`../images/rezoningLongLogo.png`)
 
 class App extends Component {
@@ -29,6 +29,7 @@ class App extends Component {
           <div className="content">
             <Route exact path='/' render={(props) => <PetitionsPage {...props}/>} />
             <Route exact path='/:petitionId' component={PetitionsShow}/>
+            <Route path="/district/:districtId" render={(props) => <PetitionsPage {...props} />} />
           </div>
         </div>
       </Router>

@@ -15,7 +15,7 @@ class PetitionsPage extends Component {
     return (
       <div className="content">
         <h2>Petitions from this year</h2>
-        <PetitionList petitions={this.props.petitions}/>
+        <PetitionList petitions={this.props.petitions} />
         {/* <Switch> {/* Make sure to wrap all of your Routes as children of the Switch component*/ } */}
           {/* <Route exact path={`${this.props.match.url}/:petitionId`} component={PetitionsShow}/> */}
         {/* </Switch> */}
@@ -24,7 +24,12 @@ class PetitionsPage extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+  if (ownProps.match.params.districtId) {
+    return {
+      petitions: state.petitions.filter(petitions => petitions.district === ownProps.match.params.districtId)
+    }
+  }
   return {
     petitions: state.petitions
   }
