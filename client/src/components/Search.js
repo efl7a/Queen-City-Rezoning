@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { searchPetitions } from '../actions/petitionActions'
+import { searchPetitions } from '../actions/petitionActions';
+
 class Search extends Component {
 
   constructor() {
@@ -13,7 +14,7 @@ class Search extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    searchPetitions(this.state.content);
+    this.props.searchPetitions(this.state.content);
     this.setState({
       content: ''
     })

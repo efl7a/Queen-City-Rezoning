@@ -1,5 +1,6 @@
 class PetitionsController < ApplicationController
   def index
+    puts params
     if params[:search]
       puts "searching for ${params[:search]}"
       render(
