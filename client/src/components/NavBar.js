@@ -6,15 +6,15 @@ import Search from '../containers/Search';
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="topnav">
       <NavLink to="/" exact>Home</NavLink>
-      <NavLink to="/district/1">District 1</NavLink>
-      <NavLink to="/district/2">District 2</NavLink>
-      <NavLink to="/district/3">District 3</NavLink>
-      <NavLink to="/district/4">District 4</NavLink>
-      <NavLink to="/district/5">District 5</NavLink>
-      <NavLink to="/district/6">District 6</NavLink>
-      <NavLink to="/district/7">District 7</NavLink>
+      <NavLink to="/district/1">Districts: 1</NavLink>
+      <NavLink to="/district/2">2</NavLink>
+      <NavLink to="/district/3">3</NavLink>
+      <NavLink to="/district/4">4</NavLink>
+      <NavLink to="/district/5">5</NavLink>
+      <NavLink to="/district/6">6</NavLink>
+      <NavLink to="/district/7">7</NavLink>
       <NavLink to="/district/Outside City Limits">Outside City Limits</NavLink>
         {/* Petitions By District
         <select onChange={(event) => petitionByDistrict(event.target.value)}>
