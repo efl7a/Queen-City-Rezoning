@@ -11,7 +11,7 @@ import {
 import PetitionsPage from '../containers/PetitionsPage';
 import PetitionsShow from '../containers/PetitionsShow';
 import NavBar from './NavBar';
-var rezoningLogo = require(`../images/rezoningLongLogo.png`)
+var rezoningLogo = require(`../images/rezoningLongLogo.jpg`)
 
 class App extends Component {
 
@@ -19,11 +19,14 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <div className="nav">
+            <NavBar />
+          </div>
           <div className='logo-container'>
             <img src={rezoningLogo} alt='rezoning logo' className='logo' />
-            <div className="nav">
+            {/* <div className="nav">
               <NavBar />
-            </div>
+            </div> */}
           </div>
 
           <div className="content">
