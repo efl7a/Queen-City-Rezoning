@@ -5,7 +5,7 @@ class PetitionsController < ApplicationController
       puts "searching for ${params[:search]}"
       render(
         status: 200,
-        json: Petition.where('keywords LIKE ?', '%' + params[:search] + '%').all
+        json: Petition.where('description LIKE ?', '%' + params[:search] + '%').all
       )
     # elsif params[:district]
     #   puts params[:district]

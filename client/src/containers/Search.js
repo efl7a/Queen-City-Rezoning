@@ -28,7 +28,7 @@ class Search extends Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={(event) => this.handleOnSubmit(event)}>
         <input type="text" value={this.state.content} onChange={this.handleOnChange} placeholder="search"/>
         <input type="submit" value="Search"/>
       </form>

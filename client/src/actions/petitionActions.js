@@ -8,9 +8,10 @@ export function fetchPetitions () {
 }
 
 export function searchPetitions (searchTerm) {
+  console.log(`/api/petitions/?search=${searchTerm}`)
   return(dispatch) => {
     dispatch({ type: 'SEARCHING_PETITIONS' });
-    return fetch(`/api/petitions?search=${searchTerm}`)
+    return fetch(`/api/petitions/?search=${searchTerm}`)
     .then(response => { return response.json() })
     .then(petitions => dispatch({ type: 'FETCH_PETITIONS', payload: petitions }))
   }
